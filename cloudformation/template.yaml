@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Scan test template with deliberate misconfigurations
+Resources:
+  LogsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: bce62664-scan-test-logs
+      AccessControl: PublicReadWrite
+  OpenQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: bce62664-scan-test-queue
